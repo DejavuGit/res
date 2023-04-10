@@ -77,9 +77,9 @@ body{
  padding: 0;
 }
 .header-svg{
- width: 100px;
- height: 100px;
- margin-right: 3rem;
+ width: 80px;
+ height: 80px;
+ margin-right: 2rem;
 }
 .check-svg{
  width: 40px;
@@ -99,8 +99,8 @@ body{
    top: 50%;
   }
  .header__img{
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   margin-right: 3rem;
   border-radius: 50%;
   border: 10px solid #fff;
@@ -108,8 +108,8 @@ body{
 
  
  .header__name{
-  font-size: 80px;
-  margin-bottom: 6rem;
+  font-size: 58px;
+  margin-bottom: 1rem;
   line-height: 100px;
   font-weight: bold;
   font-style: italic;
@@ -139,13 +139,7 @@ body{
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 40px;
-  svg{
-   width: 100px;
-   height: 100px;
-   margin-right: 1rem;
-  //  fill: rebeccapurple;
-   fill: #333;
-  }
+  
  }
 
 .main-info__wrap{
@@ -165,10 +159,7 @@ body{
 // }
 .project{
  margin-bottom: 4rem;
- svg{
-  width: 80px;
-  height: 80px;
- }
+ 
 }
 
 .title{
