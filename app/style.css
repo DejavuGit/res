@@ -1,3 +1,5 @@
+
+
 html{
  box-sizing: border-box;
 }
@@ -53,6 +55,8 @@ a {
 }
 body{
  font-family: Nunito, serif;
+ font-size: 42px;
+    line-height: 64px;
 }
 .header{
  margin-top: 20px;
@@ -61,10 +65,21 @@ body{
  justify-content: space-between;
  align-items: center;
  //  background-color: rebeccapurple;
- background-color: #333;
+ background-color: #1c1c1c;
  margin-bottom: 3rem;
  border-radius: 3rem;
 
+}
+
+.header-svg{
+ width: 100px;
+ height: 100px;
+ margin-right: 3rem;
+}
+.check-svg{
+ width: 40px;
+   height: 30px;
+   margin-right: 2rem;
 }
 .header__me{
   display: flex;
@@ -157,12 +172,14 @@ body{
  font-size: 58px;
  margin-bottom: 3rem;
  font-weight: bold;
- color: #663399;
- svg{
-  width: 120px;
+ color: #1c1c1c;
+ color: #1c1c1c;
+ 
+}
+.title-svg{
+ width: 120px;
   height: 120px;
   margin-right: 3rem;
- }
 }
 
 .works__top{
@@ -182,7 +199,7 @@ body{
 
  span{
   font-weight: bold;
-  color: #663399;
+  color: #1c1c1c;
   font-size: 54px;
  }
 }
@@ -217,7 +234,8 @@ body{
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
+  background-color: #1c1c1c;
  }
 .works__description{
  margin-left: 2rem;
@@ -230,7 +248,7 @@ body{
 }
 
 .skills{
- margin-bottom: 4rem;
+ margin-bottom: 5rem;
  // padding: 1rem;
  // background-color: rgb(238, 179, 179);
  // border-radius: 1rem;
@@ -242,15 +260,9 @@ body{
   display: flex;
   align-items: center;
  }
- .skills:not(:last-child){
+ .skills__item:not(:last-child){
    margin-bottom: 1rem;
-  
-  svg{
-   width: 40px;
-   height: 30px;
-   margin-right: 2rem;
-   fill: #663399;
-  }
+
  }
 
 .about{
@@ -263,15 +275,16 @@ body{
 
 .ed__title {
  margin-bottom: 2rem;
-
+ 
 }
 .ed__title span{
- color: #663399;
-  font-weight: bold;
+ color: #1c1c1c;
+ font-weight: bold;
 }
 .ed__text{
+ margin-bottom: 3rem;
  span{
-  color: #663399;
+  color: #1c1c1c;
   font-weight: bold;
  }
 }
@@ -279,16 +292,15 @@ body{
  margin-bottom: 1rem;
  span{
   font-weight: bold;
-  color: #663399;
+  color: #1c1c1c;
  }
 }
 .zavod__dol{
  // margin-bottom: 2rem;
  span{
   font-weight: bold;
-  color: #663399;
+  color: #1c1c1c;
  }
 }
-
 
 

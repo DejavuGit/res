@@ -1,11 +1,12 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss =          require('gulp-sass');
+// const scss =          require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat =        require('gulp-concat');
-// const autoprefixer =  require('gulp-autoprefixer');
+const autoprefixer =  require('gulp-autoprefixer');
 // const uglify =        require('gulp-uglify');
 // const imagemin =      require('gulp-imagemin');
-// const svgSprite =     require('gulp-svg-sprite');
+const svgSprite =     require('gulp-svg-sprite');
 // const del =           require('del');
 const browserSync =   require('browser-sync').create();
 
@@ -22,12 +23,12 @@ function browsersync() {
 
 // function styles (){
 //     return src('app/scss/style.scss')
-//     .pipe(scss({outputStyle: 'compressed'}))
+//     // .pipe(scss({outputStyle: 'compressed'}))
 //     .pipe(concat('style.min.css'))
-//     .pipe(autoprefixer({
-//         overrideBrowserslist:  ['last 5 versions'],
-//         grid: true
-//     }))
+//     // .pipe(autoprefixer({
+//     //     overrideBrowserslist:  ['last 5 versions'],
+
+//     // }))
 //     .pipe(dest('app/css'))
 //     .pipe(browserSync.stream())
 
@@ -62,17 +63,17 @@ function browsersync() {
 //     ]))
 //     .pipe(dest('dist/images'))
 // }   
-// function svgSprites (){
-// 	return src('app/images/icons/**.svg')
-// 	.pipe(svgSprite({
-// 		mode: {
-// 			stack:{
-// 				sprite: "../sprite.svg"
-// 			}
-// 		}
-// 	}))
-// 	.pipe(dest('app/images'))
-// }
+function svgSprites (){
+	return src('app/images/icons/**.svg')
+	.pipe(svgSprite({
+		mode: {
+			stack:{
+				sprite: "../sprite.svg"
+			}
+		}
+	}))
+	.pipe(dest('app/images'))
+}
 
 function build() {
     return src([
@@ -90,14 +91,14 @@ function build() {
     .pipe(dest('dist'))
 }
 
-function cleanDist() {
-    return del('dist')
-}
+// function cleanDist() {
+//     return del('dist')
+// }
 
 function watching(){
     // watch(['app/scss/**/*.scss'], styles );
     // watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts );
-    // watch(['app/images/icon/**.svg'], svgSprites );
+    watch(['app/images/icon/**.svg'], svgSprites );
     watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -106,11 +107,11 @@ function watching(){
 exports.browsersync = browsersync;
 exports.watching = watching;
 // exports.images = images;
-// exports.svgSprites = svgSprites;
+exports.svgSprites = svgSprites;
 // exports.cleanDist = cleanDist;
 // exports.build = series(cleanDist,images,build);
 
 
 
-exports.default = parallel(browsersync,watching);
+exports.default = parallel(browsersync,watching,svgSprites);
 // exports.default = parallel(styles,scripts,browsersync,svgSprites,watching);
