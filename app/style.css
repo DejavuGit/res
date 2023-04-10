@@ -1,0 +1,294 @@
+html{
+ box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+ box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+ padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+ margin: 0;
+}
+
+ul[class] {
+ list-style: none;
+}
+
+img {
+ max-width: 100%;
+ display: block;
+}
+
+input,
+button,
+textarea,
+select {
+ font: inherit;
+}
+
+a {
+ text-decoration: none;
+}
+body{
+ font-family: Nunito, serif;
+}
+.header{
+ margin-top: 20px;
+ display: flex;
+ padding: 3rem;
+ justify-content: space-between;
+ align-items: center;
+ //  background-color: rebeccapurple;
+ background-color: #333;
+ margin-bottom: 3rem;
+ border-radius: 3rem;
+
+}
+.header__me{
+  display: flex;
+  align-items: center;
+  position: relative;
+  // padding: 1rem;
+ }
+  .header__me::before{
+   content: '';
+   position: absolute;
+   right: 0;
+   top: 50%;
+  }
+ .header__img{
+  width: 400px;
+  height: 400px;
+  margin-right: 3rem;
+  border-radius: 50%;
+  border: 10px solid #fff;
+ }
+
+ 
+ .header__name{
+  font-size: 80px;
+  margin-bottom: 6rem;
+  line-height: 100px;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  // transform: translateY(-23px);
+ }
+
+ .header__job{
+  font-size: 50px;
+  color: #fff;
+  transform: translateY(-12px);
+ }
+
+.contacts{
+ display: grid;
+ grid-template-columns: repeat(1,1fr);
+ gap: 1rem;
+ color: #fff;
+}
+
+.contact__item:not(:last-child){
+  margin-bottom: 1rem;
+ }
+ .contact__link{
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 40px;
+  svg{
+   width: 100px;
+   height: 100px;
+   margin-right: 1rem;
+  //  fill: rebeccapurple;
+   fill: #333;
+  }
+ }
+
+.main-info__wrap{
+ display: grid;
+ grid-template-columns: 1.5fr 2fr;
+ // gap: 2rem;
+}
+.main-info__right{
+ padding-right: 1rem;
+ // background-color: rgb(238, 179, 179);
+ // border-radius: 1rem;
+}
+// .main-info__left{
+//  background-color: silver;
+//  border-radius: 1rem;
+//  padding: 1rem;
+// }
+.project{
+ margin-bottom: 4rem;
+ svg{
+  width: 80px;
+  height: 80px;
+ }
+}
+
+.title{
+ display: flex;
+ align-items: center;
+ font-size: 58px;
+ margin-bottom: 3rem;
+ font-weight: bold;
+ color: #663399;
+ svg{
+  width: 120px;
+  height: 120px;
+  margin-right: 3rem;
+ }
+}
+
+.works__top{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 20px;
+}
+.works__link{
+ // align-self: center;
+ display: flex;
+ align-items: center;
+}
+.works__title{
+ font-size: 42px;
+ margin-bottom: 1rem;
+
+ span{
+  font-weight: bold;
+  color: #663399;
+  font-size: 54px;
+ }
+}
+.works__item{
+ // background-color: #c7c7c77a;
+ padding: 1rem;
+ border-radius: 2rem;
+ box-shadow: 0px 0px 12px 8px #333;
+
+}
+.works__item:not(:last-child){
+  margin-bottom: 3rem;
+ }
+.works__text{
+ display: flex;
+ flex-wrap: wrap;
+}
+.works__text-item{
+ padding-left: 40px;
+ position: relative;
+ font-size: 42px;
+}
+.works__text-item:not(:last-child){
+  margin-right: 2rem;
+ }
+ .works__text-item::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rebeccapurple;
+ }
+.works__description{
+ margin-left: 2rem;
+ display: flex;
+ justify-content: space-between;
+ svg{
+  width: 70px;
+  height: 70px;
+ }
+}
+
+.skills{
+ margin-bottom: 4rem;
+ // padding: 1rem;
+ // background-color: rgb(238, 179, 179);
+ // border-radius: 1rem;
+}
+.skills__list{
+  margin-left: 1rem;
+ }
+ .skills__item{
+  display: flex;
+  align-items: center;
+ }
+ .skills:not(:last-child){
+   margin-bottom: 1rem;
+  
+  svg{
+   width: 40px;
+   height: 30px;
+   margin-right: 2rem;
+   fill: #663399;
+  }
+ }
+
+.about{
+ margin-bottom: 4rem;
+}
+.about__text{
+ // font-size: 22px;
+ margin-left: 1rem;
+}
+
+.ed__title {
+ margin-bottom: 2rem;
+
+}
+.ed__title span{
+ color: #663399;
+  font-weight: bold;
+}
+.ed__text{
+ span{
+  color: #663399;
+  font-weight: bold;
+ }
+}
+.zavod__mesto{
+ margin-bottom: 1rem;
+ span{
+  font-weight: bold;
+  color: #663399;
+ }
+}
+.zavod__dol{
+ // margin-bottom: 2rem;
+ span{
+  font-weight: bold;
+  color: #663399;
+ }
+}
+
+
+
