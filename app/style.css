@@ -144,7 +144,7 @@ body{
 
 .main-info__wrap{
  display: grid;
- grid-template-columns: 1.5fr 2fr;
+ grid-template-columns: 2fr 2fr;
  // gap: 2rem;
 }
 .main-info__right{
@@ -216,7 +216,7 @@ body{
 .works__text-item{
  padding-left: 40px;
  position: relative;
- font-size: 42px;
+ font-size: 36px;
 }
 .works__text-item:not(:last-child){
   margin-right: 2rem;
@@ -224,8 +224,8 @@ body{
  .works__text-item::before{
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   left: 0;
   top: 50%;
@@ -282,10 +282,12 @@ body{
 }
 .ed__text{
  margin-bottom: 3rem;
- span{
-  color: #1c1c1c;
-  font-weight: bold;
- }
+}
+.ed__text span {
+  
+    color: #1c1c1c;
+    font-weight: bold;
+   
 }
 .zavod__mesto{
  margin-bottom: 1rem;
